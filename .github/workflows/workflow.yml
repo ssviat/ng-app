@@ -9,7 +9,7 @@ jobs:
         with:
           node-version: '10.16.0'
       - run: npm ci
-      - run: npm test
+      - run: npm run build --prod
       - name: Release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
